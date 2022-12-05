@@ -24,10 +24,6 @@ func NewDB(conf *config.Config) *dabase_pool {
 	case "sqlite3":
 		conf.DBConfig.DB_DSN = fmt.Sprintf(conf.DB_NAME)
 		dbpool = SQLiteConn(conf)
-	case "postgres":
-		conf.DBConfig.DB_DSN = fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
-			conf.DB_HOST, conf.DB_PORT, conf.DB_USER, conf.DB_PASS, conf.DB_NAME)
-		dbpool = PGConn(conf)
 	default:
 		panic("Drive não implementado")
 	}
