@@ -1,1 +1,5 @@
 # Grupo_F - Projeto Itaú GoLang
+ROTAS - TRISTÃO E JAIR
+CONFIG - MARCOS
+BANCO - MICAEL
+MODEL - ISABELA
