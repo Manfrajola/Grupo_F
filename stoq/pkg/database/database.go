@@ -4,12 +4,12 @@ import (
 	"database/sql"
 	"fmt"
 	"version01/stoq/config"
-)
+) // Importando as bibliotecas
 
 type DatabaseInterface interface {
 	GetDB() (DB *sql.DB)
 	Close() error
-}
+} // Estrutura "DatabaseInterface"
 
 type dabase_pool struct {
 	DB *sql.DB
@@ -19,11 +19,10 @@ var dbpool = &dabase_pool{}
 
 func NewDB(conf *config.Config) *dabase_pool {
 
-	switch conf.DBConfig.DB_DRIVE {
-	case "sqlite3":
+	if conf.DBConfig.DB_DRIVE == "sqlite3" {
 		conf.DBConfig.DB_DSN = fmt.Sprintf(conf.DB_NAME)
 		dbpool = SQLiteConn(conf)
-	default:
+	} else {
 		panic("Drive não implementado")
 	}
 
