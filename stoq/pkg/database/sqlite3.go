@@ -4,8 +4,9 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/faelp22/tcs_curso/stoq/config"
+	//	"version01/stoq/config"
 
+	"github.com/faelp22/tcs_curso/stoq/config"
 	_ "github.com/mattn/go-sqlite3"
 )
 

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/faelp22/tcs_curso/stoq/entity"
-	"github.com/faelp22/tcs_curso/stoq/pkg/database"
+	"version01/stoq/entity"
+	"version01/stoq/pkg/database"
 )
 
 type ProdutoServiceInterface interface {

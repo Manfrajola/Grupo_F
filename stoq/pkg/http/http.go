@@ -6,9 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/faelp22/tcs_curso/stoq/config"
+	//"version01/stoq/config"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
+	"honnef.co/go/tools/config"
 )
 
 func NewHTTPServer(r *mux.Router, conf *config.Config) *http.Server {
