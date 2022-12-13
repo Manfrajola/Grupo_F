@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"fmt"
 	"version01/stoq/config"
-	//"version01/stoq/config"
 )
 
 type DatabaseInterface interface {
