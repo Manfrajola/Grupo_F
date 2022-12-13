@@ -10,12 +10,13 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/faelp22/tcs_curso/stoq/config"
-	"github.com/faelp22/tcs_curso/stoq/handler"
-	"github.com/faelp22/tcs_curso/stoq/pkg/database"
-	lhttp "github.com/faelp22/tcs_curso/stoq/pkg/http"
-	"github.com/faelp22/tcs_curso/stoq/pkg/service"
-	"github.com/faelp22/tcs_curso/stoq/webui"
+	"version01/stoq/config"
+	"version01/stoq/handler"
+	"version01/stoq/pkg/database"
+	lhttp "version01/stoq/pkg/http/server"
+	"version01/stoq/pkg/service"
+	"version01/stoq/webui"
+     
 	"github.com/gorilla/mux"
 	"github.com/urfave/negroni"
 )
@@ -58,7 +59,7 @@ func main() {
 		})
 	}
 
-	srv := lhttp.NewHTTPServer(r, conf)
+	srv := lhttp.NewServer()
 
 	done := make(chan bool)
 	go srv.ListenAndServe()
