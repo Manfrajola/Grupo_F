@@ -3,9 +3,8 @@ package database
 import (
 	"database/sql"
 	"fmt"
-
-	"github.com/faelp22/tcs_curso/stoq/config"
-	//	"version01/stoq/config"
+	"version01/stoq/config"
+	//"version01/stoq/config"
 )
 
 type DatabaseInterface interface {
