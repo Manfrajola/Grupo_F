@@ -16,7 +16,7 @@ import (
 	lhttp "version01/stoq/pkg/http/server"
 	"version01/stoq/pkg/service"
 	"version01/stoq/webui"
-     
+
 	"github.com/gorilla/mux"
 	"github.com/urfave/negroni"
 )
@@ -59,7 +59,7 @@ func main() {
 		})
 	}
 
-	srv := lhttp.NewServer()
+	srv := lhttp.NewHTTPServer(r, conf)
 
 	done := make(chan bool)
 	go srv.ListenAndServe()

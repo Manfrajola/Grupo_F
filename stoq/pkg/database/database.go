@@ -35,7 +35,7 @@ func NewDB(conf *config.Config) *dabase_pool { // Função paera conectar o banc
 	return dbpool
 }
 
-func (d *dabase_pool) Close() error { // Função paera desconectar o banco de dados
+func (d *dabase_pool) Close() error { // Função para desconectar o banco de dados
 
 	err := d.DB.Close()
 	if err != nil {
